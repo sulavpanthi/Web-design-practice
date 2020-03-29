@@ -14,6 +14,9 @@
     <title>Responsive Design</title>
   </head>
   <body>
+    <div class="overlay" id="overlay">
+      <h3>Searching Now...</h3>
+    </div>
     <div class="hero-bg">
       <!-- first section  -->
       <section class="top">
@@ -41,7 +44,7 @@
               <input type="text" name="city" id="city">
               <p>Example: Bhairahawa</p>
             </div>
-            <input type="button" value="Find Food Now">
+            <input type="button" value="Find Food Now" id="cta-btn">
           <form>
         </div>
       </section>
@@ -55,5 +58,16 @@
       </div>
       <img src="images/food.jpg" alt="momo">
     </section>
+
+    <script>
+      let btn = document.getElementById('cta-btn');
+      let overlay = document.getElementById('overlay');
+
+      btn.addEventListener('click', ()=>{
+        overlay.style.display = 'grid';
+        overlay.classList.add('animate-overlay');
+      })
+    </script>
+
   </body>
 </html>
